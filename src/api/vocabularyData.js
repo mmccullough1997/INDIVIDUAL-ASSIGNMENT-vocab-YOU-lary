@@ -15,4 +15,42 @@ const getCards = (uid) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export default getCards;
+const cardsProgrammingLanguage = (uid) => new Promise((resolve, reject) => {
+  getCards(uid)
+    .then((userCards) => {
+      const programCards = userCards.filter((card) => card.tech === 'Language');
+      resolve(programCards);
+    }).catch((error) => reject(error));
+});
+
+const cardsComputing = (uid) => new Promise((resolve, reject) => {
+  getCards(uid)
+    .then((userCards) => {
+      const computingCards = userCards.filter((card) => card.tech === 'Computing Technology');
+      resolve(computingCards);
+    }).catch((error) => reject(error));
+});
+
+const cardsFintech = (uid) => new Promise((resolve, reject) => {
+  getCards(uid)
+    .then((userCards) => {
+      const fintechCards = userCards.filter((card) => card.tech === 'FinTech');
+      resolve(fintechCards);
+    }).catch((error) => reject(error));
+});
+
+const cardsPlatform = (uid) => new Promise((resolve, reject) => {
+  getCards(uid)
+    .then((userCards) => {
+      const platformCards = userCards.filter((card) => card.tech === 'Platform');
+      resolve(platformCards);
+    }).catch((error) => reject(error));
+});
+
+export {
+  getCards,
+  cardsProgrammingLanguage,
+  cardsComputing,
+  cardsFintech,
+  cardsPlatform
+};

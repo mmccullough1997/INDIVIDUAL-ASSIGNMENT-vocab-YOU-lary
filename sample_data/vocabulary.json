@@ -2,7 +2,7 @@
   "00001":{
     "title": "Javascript",
     "definition": "A headache-inducing ordeal",
-    "tech": "Programming-Langauage",
+    "tech": "Language",
     "firebaseKey" : "00001",
     "time": "",
     "uid": "9uk51dWAEzRpUOkqgN5QE0AFBIp2"
@@ -10,7 +10,7 @@
   "00002":{
     "title": "Python",
     "definition": "A fun snake",
-    "tech": "Programming-Langauage",
+    "tech": "Language",
     "firebaseKey" : "00002",
     "time": "",
     "uid": "9uk51dWAEzRpUOkqgN5QE0AFBIp2"
