@@ -17,11 +17,11 @@ const addVocabCard = (obj = {}) => {
   </div>
 
   <select class="form-select" aria-label="Select Tech Category" id="select-tech">
-    <option selected>Select Tech Category</option>
-    <option value="1">Language</option>
-    <option value="2">Computing Technology</option>
-    <option value="3">FinTech</option>
-    <option value="3">Platform</option>
+    <option selected>${obj.tech || 'Select Tech Category'}</option>
+    <option value="Language">Language</option>
+    <option value="Computing Technology">Computing Technology</option>
+    <option value="FinTech">FinTech</option>
+    <option value="Platform">Platform</option>
   </select>
 
   <button type="submit" class="btn btn-primary">Submit Book
