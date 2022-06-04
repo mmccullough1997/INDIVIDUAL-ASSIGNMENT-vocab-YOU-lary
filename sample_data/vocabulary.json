@@ -1,0 +1,51 @@
+{
+  "00001":{
+    "title": "Javascript",
+    "definition": "A headache-inducing ordeal",
+    "tech": "Programming-Langauage",
+    "firebaseKey" : "00001",
+    "time": "",
+    "uid": ""
+  },
+  "00002":{
+    "title": "Python",
+    "definition": "A fun snake",
+    "tech": "Programming-Langauage",
+    "firebaseKey" : "00002",
+    "time": "",
+    "uid": ""
+  },
+  "00003":{
+    "title": "Quantum-Computing",
+    "definition": "Doesn't exist... or does it?",
+    "tech": "Computing Technology",
+    "firebaseKey" : "00003",
+    "time": "",
+    "uid": ""
+  },
+  "00004":{
+    "title": "Bitcoin",
+    "definition": "Something that tech bros like to brag about",
+    "tech": "FinTech",
+    "firebaseKey" : "00004",
+    "time": "",
+    "uid": ""
+  },
+  "00005":{
+    "title": "The Blockchain",
+    "definition": "Something you roommate tries to explain to you at 3am on a Tuesday night",
+    "tech": "FinTech",
+    "firebaseKey" : "00005",
+    "time": "",
+    "uid": ""
+  },
+  "00006":{
+    "title": "Youtube",
+    "definition": "Lots of cat videos",
+    "tech": "Platform",
+    "firebaseKey" : "00006",
+    "time": "",
+    "uid": ""
+  }
+
+}
