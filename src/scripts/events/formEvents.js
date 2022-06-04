@@ -1,5 +1,5 @@
 import { showCards } from '../components/pages/vocabCards';
-import { createCard } from '../../api/vocabularyData';
+import { createCard, updateCard } from '../../api/vocabularyData';
 
 const formEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('submit', (event) => {
@@ -14,6 +14,19 @@ const formEvents = (uid) => {
         uid
       };
       createCard(cardObject).then((cardsArray) => showCards(cardsArray));
+    }
+
+    // click event for editing a card
+    if (event.target.id.includes('update-card')) {
+      const [, firebaseKey] = event.target.id.split('--');
+      const cardObject = {
+        title: document.querySelector('#title').value,
+        definition: document.querySelector('#definition').value,
+        tech: document.querySelector('#select-tech').value,
+        firebaseKey,
+        uid
+      };
+      updateCard(cardObject).then(showCards);
     }
   });
 };

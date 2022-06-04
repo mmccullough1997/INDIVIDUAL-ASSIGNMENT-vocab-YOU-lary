@@ -65,6 +65,18 @@ const createCard = (cardObj) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
+const updateCard = (cardObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/vocabulary/${cardObj.firebaseKey}.json`, cardObj)
+    .then(() => getCards(cardObj.uid).then(resolve))
+    .catch(reject);
+});
+
+const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocabulary/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
 export {
   getCards,
   cardsProgrammingLanguage,
@@ -72,5 +84,7 @@ export {
   cardsFintech,
   cardsPlatform,
   deleteCard,
-  createCard
+  createCard,
+  updateCard,
+  getSingleCard
 };
