@@ -1,13 +1,21 @@
-import domBuilder from '../../components/builder/domBuilder';
-import navBar from '../../components/builder/navBar';
-import logoutButton from '../components/logoutButton';
+import { getCards } from '../../api/vocabularyData';
+import domBuilder from '../components/builder/domBuilder';
+import filterButtons from '../components/builder/filterButtons';
+import navBar from '../components/builder/navBar';
+import logoutButton from '../components/buttons/logoutButton';
+import { showCards } from '../components/pages/vocabCards';
+import filterEvents from '../events/filterEvents';
 import navigationEvents from '../events/navigationEvents';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder();
   navBar();
   navigationEvents();
   logoutButton();
+  filterButtons();
+  filterEvents(user.uid);
+  // console.warn(getCards(user.uid));
+  getCards(user.uid).then((cardsArray) => showCards(cardsArray));
 };
 
 export default startApp;

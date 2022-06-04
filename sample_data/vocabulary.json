@@ -2,18 +2,18 @@
   "00001":{
     "title": "Javascript",
     "definition": "A headache-inducing ordeal",
-    "tech": "Programming-Langauage",
+    "tech": "Language",
     "firebaseKey" : "00001",
     "time": "",
-    "uid": ""
+    "uid": "9uk51dWAEzRpUOkqgN5QE0AFBIp2"
   },
   "00002":{
     "title": "Python",
     "definition": "A fun snake",
-    "tech": "Programming-Langauage",
+    "tech": "Language",
     "firebaseKey" : "00002",
     "time": "",
-    "uid": ""
+    "uid": "9uk51dWAEzRpUOkqgN5QE0AFBIp2"
   },
   "00003":{
     "title": "Quantum-Computing",
@@ -21,7 +21,7 @@
     "tech": "Computing Technology",
     "firebaseKey" : "00003",
     "time": "",
-    "uid": ""
+    "uid": "9uk51dWAEzRpUOkqgN5QE0AFBIp2"
   },
   "00004":{
     "title": "Bitcoin",
@@ -29,7 +29,7 @@
     "tech": "FinTech",
     "firebaseKey" : "00004",
     "time": "",
-    "uid": ""
+    "uid": "9uk51dWAEzRpUOkqgN5QE0AFBIp2"
   },
   "00005":{
     "title": "The Blockchain",
@@ -37,7 +37,7 @@
     "tech": "FinTech",
     "firebaseKey" : "00005",
     "time": "",
-    "uid": ""
+    "uid": "9uk51dWAEzRpUOkqgN5QE0AFBIp2"
   },
   "00006":{
     "title": "Youtube",

@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import firebaseConfig from '../../api/apiKeys';
-import loginButton from '../components/loginButton';
+import loginButton from '../components/buttons/loginButton';
 import startApp from './startApp';
 
 const checkLoginStatus = () => {
