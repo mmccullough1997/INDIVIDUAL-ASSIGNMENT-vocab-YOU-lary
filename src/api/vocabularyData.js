@@ -47,10 +47,30 @@ const cardsPlatform = (uid) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
+const deleteCard = (firebaseKey, uid) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/vocabulary/${firebaseKey}.json`)
+    .then(() => {
+      getCards(uid).then(resolve);
+    }).catch((error) => reject(error));
+});
+
+const createCard = (cardObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/vocabulary.json`, cardObj)
+    .then((response) => {
+      const payload = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/vocabulary/${response.data.name}.json`, payload)
+        .then(() => {
+          getCards(cardObj.uid).then(resolve); // get all cards
+        });
+    }).catch(reject);
+});
+
 export {
   getCards,
   cardsProgrammingLanguage,
   cardsComputing,
   cardsFintech,
-  cardsPlatform
+  cardsPlatform,
+  deleteCard,
+  createCard
 };
