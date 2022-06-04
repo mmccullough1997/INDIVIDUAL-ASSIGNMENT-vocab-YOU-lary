@@ -7,10 +7,12 @@ const formEvents = (uid) => {
 
     // click event for adding a card
     if (event.target.id.includes('submit-card')) {
+      // const t = new Date();
       const cardObject = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         tech: document.querySelector('#select-tech').value,
+        time: new Date().toLocaleString(),
         uid
       };
       createCard(cardObject).then((cardsArray) => showCards(cardsArray));
@@ -23,6 +25,7 @@ const formEvents = (uid) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         tech: document.querySelector('#select-tech').value,
+        time: new Date().toLocaleString(),
         firebaseKey,
         uid
       };
