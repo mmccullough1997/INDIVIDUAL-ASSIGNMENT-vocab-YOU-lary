@@ -1,4 +1,4 @@
-import renderToDOM from '../helpers/renderToDom';
+import renderToDOM from '../../helpers/renderToDom';
 
 const logoutButton = () => {
   const domString = `<button id="google-auth" class="btn btn-danger ml-2">

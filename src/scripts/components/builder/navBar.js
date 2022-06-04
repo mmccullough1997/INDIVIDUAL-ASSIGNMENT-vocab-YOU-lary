@@ -1,4 +1,4 @@
-import renderToDOM from '../../scripts/helpers/renderToDom';
+import renderToDOM from '../../helpers/renderToDom';
 
 const navBar = () => {
   const domString = `
@@ -19,17 +19,9 @@ const navBar = () => {
         </li>
 
         <li class="nav-item">
-        <button class="btn btn-success btn-lg mb-4" id="add-card-btn">Add A Card</button>
+        <button class="btn btn-success ml-2" id="add-card-btn">Add A Card</button>
         </li>
 
-        <li>
-          <input
-          class="form-control me-2"
-          id="search"
-          placeholder="Search Cards"
-          aria-label="Search"
-          />
-        </li>
       </ul>
 
       <span class="navbar-text">
