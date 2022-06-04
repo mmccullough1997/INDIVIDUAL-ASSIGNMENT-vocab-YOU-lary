@@ -1,3 +1,4 @@
+import clearDom from '../../helpers/clearDom';
 import renderToDOM from '../../helpers/renderToDom';
 
 const emptyCards = () => {
@@ -6,6 +7,7 @@ const emptyCards = () => {
 };
 
 const showCards = (array) => {
+  clearDom();
   if (array.length) {
     let domString = '';
     array.forEach((card) => {

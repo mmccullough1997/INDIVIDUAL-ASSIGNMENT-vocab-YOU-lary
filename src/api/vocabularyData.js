@@ -47,10 +47,44 @@ const cardsPlatform = (uid) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
+const deleteCard = (firebaseKey, uid) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/vocabulary/${firebaseKey}.json`)
+    .then(() => {
+      getCards(uid).then(resolve);
+    }).catch((error) => reject(error));
+});
+
+const createCard = (cardObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/vocabulary.json`, cardObj)
+    .then((response) => {
+      const payload = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/vocabulary/${response.data.name}.json`, payload)
+        .then(() => {
+          getCards(cardObj.uid).then(resolve); // get all cards
+        });
+    }).catch(reject);
+});
+
+const updateCard = (cardObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/vocabulary/${cardObj.firebaseKey}.json`, cardObj)
+    .then(() => getCards(cardObj.uid).then(resolve))
+    .catch(reject);
+});
+
+const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocabulary/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
 export {
   getCards,
   cardsProgrammingLanguage,
   cardsComputing,
   cardsFintech,
-  cardsPlatform
+  cardsPlatform,
+  deleteCard,
+  createCard,
+  updateCard,
+  getSingleCard
 };
