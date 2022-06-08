@@ -3,7 +3,7 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-color: black;
   color: brown;
   text-align: center;
   margin-top: 100px;
@@ -11,6 +11,7 @@ body {
 
 .filterButton {
   margin: 10px;
+  border: solid 1px gold;
 }
 
 #cards-container {
@@ -27,3 +28,47 @@ body {
 
   }
 }
+
+#form-container {
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.form-select {
+  margin: 10px;
+}
+
+.form-control {
+  margin: 10px;
+}
+
+.logo {
+  height: 80px;
+  width: 400px;
+  position: fixed;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#google-auth {
+  margin: 20px;
+}
+
+.introHeader {
+  font-family: "Lucida Handwriting","Papyrus", cursive;
+}
+
+.navbar {
+  margin-bottom: 50px !important;
+}
+
+#filter-buttons{
+  padding-top: 40px;
+} 
+  

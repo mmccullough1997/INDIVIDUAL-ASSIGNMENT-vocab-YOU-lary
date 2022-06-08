@@ -12,10 +12,11 @@ const addVocabCard = (obj = {}) => {
   </div>
   
   <div class="form-group">
-    <label for="description">Definition</label>
+    <label for="definition">Definition</label>
     <textarea class="form-control" placeholder="Card Definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
   </div>
-
+  
+  <label for="select-tech">Tech Category</label>
   <select class="form-select" aria-label="Select Tech Category" id="select-tech">
     <option selected>${obj.tech || 'Select Tech Category'}</option>
     <option value="Language">Language</option>
