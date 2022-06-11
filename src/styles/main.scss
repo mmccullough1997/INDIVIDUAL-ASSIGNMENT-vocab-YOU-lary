@@ -75,3 +75,19 @@ body {
 .navIcon {
   background-color: white;
 }
+
+.sortFilter {
+  width: 50%;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+#sortButton {
+  display: flex;
+  justify-content: center;
+}
+
+.sortButtonIcon {
+  height: 40px;
+  margin-top: 9px;
+}

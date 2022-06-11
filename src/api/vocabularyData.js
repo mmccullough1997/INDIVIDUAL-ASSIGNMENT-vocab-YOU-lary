@@ -77,6 +77,30 @@ const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const alphabeticallySortCards = (uid) => new Promise((resolve, reject) => {
+  getCards(uid)
+    .then((userCards) => {
+      const alphabeticallySortedCards = userCards.sort((a, b) => a.title.localeCompare(b.title));
+      resolve((alphabeticallySortedCards));
+    }).catch((error) => reject(error));
+});
+
+const oldestToNewestCards = (uid) => new Promise((resolve, reject) => {
+  getCards(uid)
+    .then((userCards) => {
+      const newestSortedCards = userCards.sort((a, b) => new Date(a.time) - new Date(b.time));
+      resolve((newestSortedCards));
+    }).catch((error) => reject(error));
+});
+
+const newestToOldestCards = (uid) => new Promise((resolve, reject) => {
+  getCards(uid)
+    .then((userCards) => {
+      const oldestSortedCards = userCards.sort((a, b) => new Date(b.time) - new Date(a.time));
+      resolve((oldestSortedCards));
+    }).catch((error) => reject(error));
+});
+
 export {
   getCards,
   cardsProgrammingLanguage,
@@ -86,5 +110,8 @@ export {
   deleteCard,
   createCard,
   updateCard,
-  getSingleCard
+  getSingleCard,
+  alphabeticallySortCards,
+  oldestToNewestCards,
+  newestToOldestCards
 };
